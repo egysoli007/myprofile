@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>محمد سليمان | متخصص تسويق رقمي وذكاء اصطناعي</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Readex+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <style>
+        :root {
+            --font-ar: 'Cairo', sans-serif;
+            --font-en: 'Readex Pro', sans-serif;
+        }
+        body {
+            font-family: var(--font-ar);
+            background-color: #f8f9fa;
+        }
+        html[lang="en"] body {
+            font-family: var(--font-en);
+        }
+        .hero-bg {
+            background-color: #1a202c;
+            background-image: linear-gradient(135deg, #1a202c 0%, #2d3748 100%);
+        }
+        .section-title {
+            color: #1a202c;
+        }
+        .card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+        }
+        .btn-primary {
+            background-color: #2d3748;
+            color: white;
+            transition: background-color 0.3s ease;
+        }
+        .btn-primary:hover {
+            background-color: #4a5568;
+        }
+        .tag {
+            background-color: #e2e8f0;
+            color: #4a5568;
+        }
+        .modal {
+            transition: opacity 0.3s ease;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <!-- Language Toggle -->
+    <div class="absolute top-4 right-4 z-20">
+        <button id="lang-toggle" class="bg-white/20 text-white font-bold py-2 px-4 rounded-lg backdrop-blur-sm hover:bg-white/30 transition">
+            EN
+        </button>
+    </div>
+
+    <!-- ==== Header & Hero Section ==== -->
+    <header class="hero-bg text-white shadow-lg">
+        <div class="container mx-auto px-6 py-16 text-center">
+            <img src="cv.jpg" alt="صورة محمد سليمان" class="w-40 h-40 mx-auto rounded-full border-4 border-gray-400 object-cover shadow-xl">
+            <h1 class="text-4xl md:text-5xl font-bold mt-6 mb-2" data-lang-key="name">محمد أحمد سليمان</h1>
+            <p class="text-xl md:text-2xl text-gray-300 font-light" data-lang-key="job_title">متخصص في التسويق الرقمي وتطبيقات الذكاء الاصطناعي</p>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-6 py-12">
+
+        <!-- ==== About Me & Skills Section ==== -->
+        <section id="about" class="mb-16">
+            <div class="bg-white p-8 rounded-xl shadow-md">
+                <h2 class="text-3xl font-bold section-title mb-4" data-lang-key="about_me_title">نبذة عني</h2>
+                <p class="text-lg text-gray-600 mb-8 leading-relaxed" data-lang-key="about_me_text">
+                    خريج إدارة أعمال بخبرة تجمع بين استراتيجيات التسويق الرقمي الحديثة والقدرة على تطويع أدوات الذكاء الاصطناعي لتحقيق نتائج استثنائية. أمتلك شغفًا بتحليل البيانات وتصميم الحلول الإبداعية التي تدفع عجلة النمو للأعمال.
+                </p>
+
+                <h3 class="text-2xl font-bold section-title mb-6" data-lang-key="skills_title">المهارات الأساسية</h3>
+                <div class="flex flex-wrap gap-4" id="skills-container">
+                    <span class="tag font-semibold py-2 px-4 rounded-full" data-lang-key="skill1">التسويق الرقمي</span>
+                    <span class="tag font-semibold py-2 px-4 rounded-full" data-lang-key="skill2">أدوات الذكاء الاصطناعي التوليدي</span>
+                    <span class="tag font-semibold py-2 px-4 rounded-full" data-lang-key="skill3">تحليل البيانات</span>
+                    <span class="tag font-semibold py-2 px-4 rounded-full" data-lang-key="skill4">تصميم الجرافيك</span>
+                    <span class="tag font-semibold py-2 px-4 rounded-full" data-lang-key="skill5">التجارة الإلكترونية</span>
+                    <span class="tag font-semibold py-2 px-4 rounded-full" data-lang-key="skill6">Microsoft Office</span>
+                    <span class="tag font-semibold py-2 px-4 rounded-full" data-lang-key="skill7">CapCut</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==== Projects Section ==== -->
+        <section id="projects" class="mb-16">
+            <h2 class="text-3xl font-bold section-title text-center mb-10" data-lang-key="projects_title">أبرز المشاريع</h2>
+            <div class="grid md:grid-cols-2 gap-10">
+                
+                <div class="card bg-white rounded-xl shadow-md overflow-hidden">
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold mb-3" data-lang-key="project1_title">تحليل شامل لموقع عقاري</h3>
+                        <p class="text-gray-600 mb-6" data-lang-key="project1_desc">تقرير متكامل يحلل نقاط القوة والضعف لموقع "مصادقة" العقاري، مع تقديم توصيات تسويقية وتقنية مبنية على تحليل المنافسين والبيانات.</p>
+                        <button onclick="openModal('analysis.pdf', 'project1_title')" class="btn-primary font-bold py-2 px-6 rounded-lg inline-block">
+                            <i class="fas fa-search-dollar ltr:mr-2 rtl:ml-2"></i><span data-lang-key="view_analysis">عرض التحليل</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="card bg-white rounded-xl shadow-md overflow-hidden">
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold mb-3" data-lang-key="project2_title">تصميم كتالوج منتجات إضاءة</h3>
+                        <p class="text-gray-600 mb-6" data-lang-key="project2_desc">تصميم وتنسيق كتالوج احترافي لمؤسسة "الطيف بلس"، يعرض المنتجات بشكل جذاب ومنظم لتحفيز المبيعات وتسهيل عملية الاختيار للعملاء.</p>
+                        <button onclick="openModal('Lighting_Catalog.pdf', 'project2_title')" class="btn-primary font-bold py-2 px-6 rounded-lg inline-block">
+                            <i class="fas fa-lightbulb ltr:mr-2 rtl:ml-2"></i><span data-lang-key="view_catalog">تصفح الكتالوج</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==== Certificates Section ==== -->
+        <section id="certificates" class="mb-16">
+            <h2 class="text-3xl font-bold section-title text-center mb-10" data-lang-key="certs_title">الشهادات الاحترافية</h2>
+            <div class="grid md:grid-cols-2 gap-10">
+
+                <div class="card flex items-center bg-white p-6 rounded-xl shadow-md">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" alt="شعار جوجل" class="w-16 h-16 ltr:mr-6 rtl:ml-6">
+                    <div>
+                        <h3 class="text-xl font-bold" data-lang-key="cert1_title">أساسيات التسويق الرقمي</h3>
+                        <p class="text-gray-600" data-lang-key="cert1_issuer">شهادة معتمدة من Google عبر Coursera.</p>
+                        <button onclick="openModal('certificate_google.pdf', 'cert1_title')" class="text-blue-600 hover:underline font-semibold mt-2 inline-block" data-lang-key="view_cert">عرض الشهادة</button>
+                    </div>
+                </div>
+
+                <div class="card flex items-center bg-white p-6 rounded-xl shadow-md">
+                     <img src="https://placehold.co/64x64/1a202c/ffffff?text=AI" alt="شعار الذكاء الاصطناعي" class="w-16 h-16 ltr:mr-6 rtl:ml-6 rounded-lg">
+                    <div>
+                        <h3 class="text-xl font-bold" data-lang-key="cert2_title">الذكاء الاصطناعي التوليدي</h3>
+                        <p class="text-gray-600" data-lang-key="cert2_issuer">شهادة معتمدة من AI ACADEMY للتطبيقات والأدوات.</p>
+                        <button onclick="openModal('certificate_ai.pdf', 'cert2_title')" class="text-blue-600 hover:underline font-semibold mt-2 inline-block" data-lang-key="view_cert">عرض الشهادة</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+    </main>
+
+    <!-- ==== Footer & Contact Section ==== -->
+    <footer class="hero-bg text-white py-12">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold mb-4" data-lang-key="contact_title">للتواصل</h2>
+            <p class="text-gray-300 mb-8" data-lang-key="contact_subtitle">يسعدني تلقي استفساراتكم وفرص التعاون.</p>
+            <div class="flex justify-center items-center gap-8 flex-wrap">
+                <a href="mailto:xmr77022@gmail.com" class="text-lg hover:text-gray-400 transition">
+                    <i class="fas fa-envelope ltr:mr-2 rtl:ml-2"></i>xmr77022@gmail.com
+                </a>
+                <a href="https://wa.me/201060867622" target="_blank" class="text-lg hover:text-gray-400 transition">
+                    <i class="fab fa-whatsapp ltr:mr-2 rtl:ml-2"></i><span data-lang-key="whatsapp">واتساب</span>
+                </a>
+                <a href="https://t.me/soli3352" target="_blank" class="text-lg hover:text-gray-400 transition">
+                    <i class="fab fa-telegram ltr:mr-2 rtl:ml-2"></i><span data-lang-key="telegram">تيليجرام</span>
+                </a>
+            </div>
+            <div class="mt-10 border-t border-gray-700 pt-6">
+                 <p class="text-gray-500" data-lang-key="footer_note">تم تصميم وتطوير هذه الصفحة بكل شغف.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ==== Modal for PDF and HTML ==== -->
+    <div id="file-modal" class="modal fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center p-4 z-50 hidden opacity-0">
+        <div class="bg-white rounded-lg shadow-xl w-full max-w-4xl h-5/6 flex flex-col">
+            <header class="flex justify-between items-center p-4 border-b">
+                <h3 id="modal-title" class="text-xl font-bold text-gray-800"></h3>
+                <button onclick="closeModal()" class="text-3xl text-gray-500 hover:text-gray-800">&times;</button>
+            </header>
+            <div class="flex-grow p-1">
+                <iframe id="modal-iframe" src="" class="w-full h-full border-none"></iframe>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        const translations = {
+            ar: {
+                name: "محمد أحمد سليمان",
+                job_title: "متخصص في التسويق الرقمي وتطبيقات الذكاء الاصطناعي",
+                about_me_title: "نبذة عني",
+                about_me_text: "خريج إدارة أعمال بخبرة تجمع بين استراتيجيات التسويق الرقمي الحديثة والقدرة على تطويع أدوات الذكاء الاصطناعي لتحقيق نتائج استثنائية. أمتلك شغفًا بتحليل البيانات وتصميم الحلول الإبداعية التي تدفع عجلة النمو للأعمال.",
+                skills_title: "المهارات الأساسية",
+                skill1: "التسويق الرقمي",
+                skill2: "أدوات الذكاء الاصطناعي التوليدي",
+                skill3: "تحليل البيانات",
+                skill4: "تصميم الجرافيك",
+                skill5: "التجارة الإلكترونية",
+                skill6: "Microsoft Office",
+                skill7: "CapCut",
+                projects_title: "أبرز المشاريع",
+                project1_title: "تحليل شامل لموقع عقاري",
+                project1_desc: "تقرير متكامل يحلل نقاط القوة والضعف لموقع \"مصادقة\" العقاري، مع تقديم توصيات تسويقية وتقنية مبنية على تحليل المنافسين والبيانات.",
+                view_analysis: "عرض التحليل",
+                project2_title: "تصميم كتالوج منتجات إضاءة",
+                project2_desc: "تصميم وتنسيق كتالوج احترافي لمؤسسة \"الطيف بلس\"، يعرض المنتجات بشكل جذاب ومنظم لتحفيز المبيعات وتسهيل عملية الاختيار للعملاء.",
+                view_catalog: "تصفح الكتالوج",
+                certs_title: "الشهادات الاحترافية",
+                cert1_title: "أساسيات التسويق الرقمي",
+                cert1_issuer: "شهادة معتمدة من Google عبر Coursera.",
+                cert2_title: "الذكاء الاصطناعي التوليدي",
+                cert2_issuer: "شهادة معتمدة من AI ACADEMY للتطبيقات والأدوات.",
+                view_cert: "عرض الشهادة",
+                contact_title: "للتواصل",
+                contact_subtitle: "يسعدني تلقي استفساراتكم وفرص التعاون.",
+                whatsapp: "واتساب",
+                telegram: "تيليجرام",
+                footer_note: "تم تصميم وتطوير هذه الصفحة بكل شغف.",
+            },
+            en: {
+                name: "Mohamed Ahmed Soliman",
+                job_title: "Digital Marketing & AI Applications Specialist",
+                about_me_title: "About Me",
+                about_me_text: "A business administration graduate with expertise combining modern digital marketing strategies and the ability to leverage AI tools for exceptional results. I have a passion for data analysis and designing creative solutions that drive business growth.",
+                skills_title: "Core Skills",
+                skill1: "Digital Marketing",
+                skill2: "Generative AI Tools",
+                skill3: "Data Analysis",
+                skill4: "Graphic Design",
+                skill5: "E-commerce",
+                skill6: "Microsoft Office",
+                skill7: "CapCut",
+                projects_title: "Featured Projects",
+                project1_title: "Comprehensive Real Estate Website Analysis",
+                project1_desc: "An integrated report analyzing the strengths and weaknesses of the \"Musadaqah\" real estate website, providing marketing and technical recommendations based on competitor and data analysis.",
+                view_analysis: "View Analysis",
+                project2_title: "Lighting Products Catalog Design",
+                project2_desc: "Designing and formatting a professional catalog for \"Al-Taif Plus Est.\", showcasing products attractively and orderly to boost sales and simplify customer selection.",
+                view_catalog: "Browse Catalog",
+                certs_title: "Professional Certificates",
+                cert1_title: "Foundations of Digital Marketing",
+                cert1_issuer: "Certified by Google via Coursera.",
+                cert2_title: "Generative Artificial Intelligence",
+                cert2_issuer: "Certified by AI ACADEMY for Tools & Applications.",
+                view_cert: "View Certificate",
+                contact_title: "Contact Me",
+                contact_subtitle: "I'd be happy to receive your inquiries and collaboration opportunities.",
+                whatsapp: "WhatsApp",
+                telegram: "Telegram",
+                footer_note: "This page was designed and developed with passion.",
+            }
+        };
+
+        const langToggleButton = document.getElementById('lang-toggle');
+        const htmlEl = document.documentElement;
+        
+        function switchLanguage(lang) {
+            // Set attributes for direction and language
+            htmlEl.setAttribute('lang', lang);
+            htmlEl.setAttribute('dir', lang === 'ar' ? 'rtl' : 'ltr');
+
+            // Toggle button text
+            langToggleButton.textContent = lang === 'ar' ? 'EN' : 'AR';
+
+            // Translate all elements with data-lang-key
+            document.querySelectorAll('[data-lang-key]').forEach(el => {
+                const key = el.getAttribute('data-lang-key');
+                if (translations[lang][key]) {
+                    el.textContent = translations[lang][key];
+                }
+            });
+        }
+
+        langToggleButton.addEventListener('click', () => {
+            const currentLang = htmlEl.getAttribute('lang') || 'ar';
+            const newLang = currentLang === 'ar' ? 'en' : 'ar';
+            switchLanguage(newLang);
+        });
+
+        // Modal functionality
+        const modal = document.getElementById('file-modal');
+        const modalTitle = document.getElementById('modal-title');
+        const modalIframe = document.getElementById('modal-iframe');
+
+        function openModal(filePath, titleKey) {
+            const currentLang = htmlEl.getAttribute('lang') || 'ar';
+            modalTitle.textContent = translations[currentLang][titleKey];
+            modalIframe.setAttribute('src', filePath);
+            modal.classList.remove('hidden');
+            setTimeout(() => modal.classList.remove('opacity-0'), 10); // For transition
+        }
+
+        function closeModal() {
+            modal.classList.add('opacity-0');
+            setTimeout(() => {
+                modal.classList.add('hidden');
+                modalIframe.setAttribute('src', ''); // Clear src to stop video/audio
+            }, 300); // Match transition duration
+        }
+        
+        // Close modal on escape key
+        window.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+                closeModal();
+            }
+        });
+
+    </script>
+
+</body>
+</html>
