@@ -50,15 +50,16 @@
         .btn-primary:hover {
             background-color: #4a5568;
         }
-        .tag {
-            background-color: #e2e8f0;
-            color: #4a5568;
-        }
         .modal {
             transition: opacity 0.3s ease;
         }
-        .competency-card {
+        .styled-card {
             border: 1px solid #e2e8f0;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+         .styled-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
         }
     </style>
 </head>
@@ -82,13 +83,24 @@
 
     <main class="container mx-auto px-6 py-12">
 
-        <!-- ==== About Me Section ==== -->
+        <!-- ==== About Me Section (UPDATED) ==== -->
         <section id="about" class="mb-16">
             <div class="bg-white p-8 rounded-xl shadow-md">
                 <h2 class="text-3xl font-bold section-title mb-4" data-lang-key="about_me_title">نبذة عني</h2>
-                <p class="text-lg text-gray-600 leading-relaxed" data-lang-key="about_me_text">
-                    محترف ديناميكي يجمع بين خلفية قوية في إدارة الأعمال وفهم عميق لاستراتيجيات التسويق الرقمي الحديثة. أمتلك خبرة عملية في تطويع أدوات الذكاء الاصطناعي لتحليل البيانات، أتمتة المهام، وصناعة محتوى إبداعي وجذاب. أسعى دائمًا لتوظيف مهاراتي التحليلية والإبداعية لتحقيق نمو ملموس ونتائج قابلة للقياس.
+                <p class="text-lg text-gray-700 leading-relaxed" data-lang-key="about_me_text">
+                    خريج إدارة أعمال بخلفية قوية في التسويق الرقمي وإبداع المحتوى، متخصص في توظيف الذكاء الاصطناعي لتطوير استراتيجيات مبتكرة وتحقيق نتائج ملموسة.
                 </p>
+                
+                <!-- Practical Experience block -->
+                <div class="mt-8 border-t border-gray-200 pt-6">
+                    <h3 class="text-xl font-bold text-gray-800 mb-4" data-lang-key="about_me_experience_title">الخبرة العملية</h3>
+                    <ul class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4 text-gray-600">
+                        <li class="flex items-center" data-lang-key="about_me_skill1"><i class="fas fa-check-circle text-green-500 rtl:ml-3 ltr:mr-3"></i>أتمتة العمليات بالذكاء الاصطناعي</li>
+                        <li class="flex items-center" data-lang-key="about_me_skill2"><i class="fas fa-check-circle text-green-500 rtl:ml-3 ltr:mr-3"></i>إنشاء مواقع إلكترونية Google Sites</li>
+                        <li class="flex items-center" data-lang-key="about_me_skill3"><i class="fas fa-check-circle text-green-500 rtl:ml-3 ltr:mr-3"></i>تصميم كتالوجات تفاعلية عبر Google Sites</li>
+                        <li class="flex items-center" data-lang-key="about_me_skill4"><i class="fas fa-check-circle text-green-500 rtl:ml-3 ltr:mr-3"></i>تحليل البيانات وصناعة محتوى إبداعي</li>
+                    </ul>
+                </div>
             </div>
         </section>
         
@@ -97,22 +109,53 @@
             <h2 class="text-3xl font-bold section-title text-center mb-10" data-lang-key="competencies_title">الكفاءات الأساسية</h2>
             <div class="grid md:grid-cols-3 gap-8">
                 <!-- Competency 1 -->
-                <div class="competency-card bg-white p-6 rounded-xl shadow-sm text-center">
+                <div class="styled-card bg-white p-6 rounded-xl text-center">
                     <div class="text-4xl text-blue-600 mb-4"><i class="fas fa-chart-line"></i></div>
                     <h3 class="text-xl font-bold mb-2" data-lang-key="competency1_title">التسويق الاستراتيجي</h3>
                     <p class="text-gray-600" data-lang-key="competency1_desc">بناء وتنفيذ استراتيجيات تسويق رقمي متكاملة تركز على زيادة الوعي بالعلامة التجارية وتحقيق المبيعات.</p>
                 </div>
                 <!-- Competency 2 -->
-                <div class="competency-card bg-white p-6 rounded-xl shadow-sm text-center">
+                <div class="styled-card bg-white p-6 rounded-xl text-center">
                     <div class="text-4xl text-green-600 mb-4"><i class="fas fa-database"></i></div>
                     <h3 class="text-xl font-bold mb-2" data-lang-key="competency2_title">تحليل البيانات والأتمتة</h3>
                     <p class="text-gray-600" data-lang-key="competency2_desc">استخدام Excel و Google Sheets لتحليل البيانات واستخلاص رؤى تدعم اتخاذ القرار، وأتمتة المهام الروتينية باستخدام AI.</p>
                 </div>
                 <!-- Competency 3 -->
-                <div class="competency-card bg-white p-6 rounded-xl shadow-sm text-center">
+                <div class="styled-card bg-white p-6 rounded-xl text-center">
                     <div class="text-4xl text-purple-600 mb-4"><i class="fas fa-magic-wand-sparkles"></i></div>
                     <h3 class="text-xl font-bold mb-2" data-lang-key="competency3_title">المحتوى الإبداعي و AI</h3>
                     <p class="text-gray-600" data-lang-key="competency3_desc">تصميم وصناعة محتوى مرئي جذاب (صور، فيديوهات، تصميمات) باستخدام الأدوات التقليدية وأدوات الذكاء الاصطناعي التوليدي.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==== Creative Services Section ==== -->
+        <section id="services" class="mb-16">
+            <h2 class="text-3xl font-bold section-title text-center mb-10" data-lang-key="services_title">الخدمات الإبداعية</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <!-- Service 1: Motion Graphics -->
+                <div class="styled-card bg-white p-6 rounded-xl text-center">
+                    <div class="text-4xl text-red-500 mb-4"><i class="fas fa-film"></i></div>
+                    <h3 class="text-xl font-bold mb-2" data-lang-key="service1_title">موشن جرافيك</h3>
+                    <p class="text-gray-600" data-lang-key="service1_desc">إنتاج فيديوهات رسوم متحركة إبداعية لشرح الأفكار والترويج للمنتجات.</p>
+                </div>
+                <!-- Service 2: Photography -->
+                <div class="styled-card bg-white p-6 rounded-xl text-center">
+                    <div class="text-4xl text-teal-500 mb-4"><i class="fas fa-camera-retro"></i></div>
+                    <h3 class="text-xl font-bold mb-2" data-lang-key="service2_title">تصوير فوتوغرافي</h3>
+                    <p class="text-gray-600" data-lang-key="service2_desc">جلسات تصوير احترافية للمنتجات والأعمال لإبراز جودتها بشكل جذاب.</p>
+                </div>
+                <!-- Service 3: Logo Design -->
+                <div class="styled-card bg-white p-6 rounded-xl text-center">
+                    <div class="text-4xl text-indigo-500 mb-4"><i class="fas fa-pen-nib"></i></div>
+                    <h3 class="text-xl font-bold mb-2" data-lang-key="service3_title">تصميم شعارات</h3>
+                    <p class="text-gray-600" data-lang-key="service3_desc">ابتكار هويات بصرية وشعارات فريدة تعبر عن علامتك التجارية بوضوح.</p>
+                </div>
+                <!-- Service 4: Content Editing -->
+                <div class="styled-card bg-white p-6 rounded-xl text-center">
+                    <div class="text-4xl text-amber-500 mb-4"><i class="fas fa-edit"></i></div>
+                    <h3 class="text-xl font-bold mb-2" data-lang-key="service4_title">تعديل المحتوى</h3>
+                    <p class="text-gray-600" data-lang-key="service4_desc">مراجعة وتحسين المحتوى النصي والمرئي لضمان وصوله بأفضل صورة للجمهور.</p>
                 </div>
             </div>
         </section>
@@ -235,7 +278,12 @@
                 name: "محمد سليمان",
                 job_title: "أخصائي تسويق رقمي ومبدع محتوى مدعوم بالذكاء الاصطناعي",
                 about_me_title: "نبذة عني",
-                about_me_text: "محترف ديناميكي يجمع بين خلفية قوية في إدارة الأعمال وفهم عميق لاستراتيجيات التسويق الرقمي الحديثة. أمتلك خبرة عملية في تطويع أدوات الذكاء الاصطناعي لتحليل البيانات، أتمتة المهام، وصناعة محتوى إبداعي وجذاب. أسعى دائمًا لتوظيف مهاراتي التحليلية والإبداعية لتحقيق نمو ملموس ونتائج قابلة للقياس.",
+                about_me_text: "خريج إدارة أعمال بخلفية قوية في التسويق الرقمي وإبداع المحتوى، متخصص في توظيف الذكاء الاصطناعي لتطوير استراتيجيات مبتكرة وتحقيق نتائج ملموسة.",
+                about_me_experience_title: "الخبرة العملية",
+                about_me_skill1: "<i class='fas fa-check-circle text-green-500 rtl:ml-3 ltr:mr-3'></i>أتمتة العمليات بالذكاء الاصطناعي",
+                about_me_skill2: "<i class='fas fa-check-circle text-green-500 rtl:ml-3 ltr:mr-3'></i>إنشاء مواقع إلكترونية احترافية",
+                about_me_skill3: "<i class='fas fa-check-circle text-green-500 rtl:ml-3 ltr:mr-3'></i>تصميم كتالوجات تفاعلية عبر Google Sites",
+                about_me_skill4: "<i class='fas fa-check-circle text-green-500 rtl:ml-3 ltr:mr-3'></i>تحليل البيانات وصناعة محتوى إبداعي",
                 competencies_title: "الكفاءات الأساسية",
                 competency1_title: "التسويق الاستراتيجي",
                 competency1_desc: "بناء وتنفيذ استراتيجيات تسويق رقمي متكاملة تركز على زيادة الوعي بالعلامة التجارية وتحقيق المبيعات.",
@@ -243,6 +291,15 @@
                 competency2_desc: "استخدام Excel و Google Sheets لتحليل البيانات واستخلاص رؤى تدعم اتخاذ القرار، وأتمتة المهام الروتينية باستخدام AI.",
                 competency3_title: "المحتوى الإبداعي و AI",
                 competency3_desc: "تصميم وصناعة محتوى مرئي جذاب (صور، فيديوهات، تصميمات) باستخدام الأدوات التقليدية وأدوات الذكاء الاصطناعي التوليدي.",
+                services_title: "الخدمات الإبداعية",
+                service1_title: "موشن جرافيك",
+                service1_desc: "إنتاج فيديوهات رسوم متحركة إبداعية لشرح الأفكار والترويج للمنتجات.",
+                service2_title: "تصوير فوتوغرافي",
+                service2_desc: "جلسات تصوير احترافية للمنتجات والأعمال لإبراز جودتها بشكل جذاب.",
+                service3_title: "تصميم شعارات",
+                service3_desc: "ابتكار هويات بصرية وشعارات فريدة تعبر عن علامتك التجارية بوضوح.",
+                service4_title: "تعديل المحتوى",
+                service4_desc: "مراجعة وتحسين المحتوى النصي والمرئي لضمان وصوله بأفضل صورة للجمهور.",
                 experience_title: "الخبرة العملية",
                 exp1_title: "إدارة وإنشاء محتوى تسويقي",
                 exp1_company: "Doriaan Medical Marketing",
@@ -273,7 +330,12 @@
                 name: "Mohamed Soliman",
                 job_title: "Digital Marketing Specialist & AI-Powered Content Creator",
                 about_me_title: "About Me",
-                about_me_text: "A dynamic professional blending a strong business administration background with a deep understanding of modern digital marketing strategies. I have hands-on experience in leveraging AI tools for data analysis, task automation, and creating engaging content. I always strive to apply my analytical and creative skills to achieve tangible growth and measurable results.",
+                about_me_text: "A Business Administration graduate with a strong background in digital marketing and content creation. I specialize in leveraging artificial intelligence to develop innovative strategies and achieve tangible results.",
+                about_me_experience_title: "Practical Experience",
+                about_me_skill1: "<i class='fas fa-check-circle text-green-500 rtl:ml-3 ltr:mr-3'></i>AI Process Automation",
+                about_me_skill2: "<i class='fas fa-check-circle text-green-500 rtl:ml-3 ltr:mr-3'></i>Professional Website Creation",
+                about_me_skill3: "<i class='fas fa-check-circle text-green-500 rtl:ml-3 ltr:mr-3'></i>Interactive Catalogs via Google Sites",
+                about_me_skill4: "<i class='fas fa-check-circle text-green-500 rtl:ml-3 ltr:mr-3'></i>Data Analysis & Creative Content",
                 competencies_title: "Core Competencies",
                 competency1_title: "Strategic Marketing",
                 competency1_desc: "Building and implementing integrated digital marketing strategies focused on increasing brand awareness and driving sales.",
@@ -281,6 +343,15 @@
                 competency2_desc: "Using Excel and Google Sheets to analyze data for decision support, and automating routine tasks using AI.",
                 competency3_title: "Creative Content & AI",
                 competency3_desc: "Designing and producing engaging visual content (images, videos, designs) using traditional and generative AI tools.",
+                services_title: "Creative Services",
+                service1_title: "Motion Graphics",
+                service1_desc: "Producing creative animated videos to explain ideas and promote products.",
+                service2_title: "Photography",
+                service2_desc: "Professional photoshoots for products and businesses to highlight their quality.",
+                service3_title: "Logo Design",
+                service3_desc: "Creating unique visual identities and logos that clearly express your brand.",
+                service4_title: "Content Editing",
+                service4_desc: "Reviewing and improving text and visual content to ensure it reaches the audience effectively.",
                 experience_title: "Work Experience",
                 exp1_title: "Marketing Content Management & Creation",
                 exp1_company: "Doriaan Medical Marketing",
@@ -313,18 +384,14 @@
         const htmlEl = document.documentElement;
         
         function switchLanguage(lang) {
-            // Set attributes for direction and language
             htmlEl.setAttribute('lang', lang);
             htmlEl.setAttribute('dir', lang === 'ar' ? 'rtl' : 'ltr');
-
-            // Toggle button text
             langToggleButton.textContent = lang === 'ar' ? 'EN' : 'AR';
-
-            // Translate all elements with data-lang-key
             document.querySelectorAll('[data-lang-key]').forEach(el => {
                 const key = el.getAttribute('data-lang-key');
                 if (translations[lang][key]) {
-                    el.textContent = translations[lang][key];
+                    // Use innerHTML to render the icons correctly
+                    el.innerHTML = translations[lang][key];
                 }
             });
         }
@@ -342,26 +409,30 @@
 
         function openModal(filePath, titleKey) {
             const currentLang = htmlEl.getAttribute('lang') || 'ar';
-            modalTitle.textContent = translations[currentLang][titleKey];
+            const titleText = translations[currentLang][titleKey] || '';
+            // Strip HTML tags from title for the modal
+            modalTitle.textContent = titleText.replace(/<[^>]*>?/gm, '');
             modalIframe.setAttribute('src', filePath);
             modal.classList.remove('hidden');
-            setTimeout(() => modal.classList.remove('opacity-0'), 10); // For transition
+            setTimeout(() => modal.classList.remove('opacity-0'), 10);
         }
 
         function closeModal() {
             modal.classList.add('opacity-0');
             setTimeout(() => {
                 modal.classList.add('hidden');
-                modalIframe.setAttribute('src', ''); // Clear src to stop video/audio
-            }, 300); // Match transition duration
+                modalIframe.setAttribute('src', '');
+            }, 300);
         }
         
-        // Close modal on escape key
         window.addEventListener('keydown', (e) => {
             if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
                 closeModal();
             }
         });
+        
+        // Initial language setup on load
+        switchLanguage('ar');
 
     </script>
 
