@@ -61,6 +61,16 @@
             transform: translateY(-5px);
             box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
         }
+        .header-badge {
+            background-color: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        .header-badge:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
+        }
     </style>
 </head>
 <body class="bg-gray-100 text-gray-800">
@@ -75,15 +85,27 @@
     <!-- ==== Header & Hero Section ==== -->
     <header class="hero-bg text-white shadow-lg">
         <div class="container mx-auto px-6 py-16 text-center">
-            <img src="cv.jpg" alt="صورة محمد سليمان" class="w-40 h-40 mx-auto rounded-full border-4 border-gray-400 object-cover shadow-xl">
+            <img src="https://placehold.co/160x160/e2e8f0/4a5568?text=MS" alt="صورة محمد سليمان" class="w-40 h-40 mx-auto rounded-full border-4 border-gray-400 object-cover shadow-xl" onerror="this.onerror=null;this.src='https://placehold.co/160x160/e2e8f0/4a5568?text=MS';">
             <h1 class="text-4xl md:text-5xl font-bold mt-6 mb-2" data-lang-key="name">محمد سليمان</h1>
             <p class="text-xl md:text-2xl text-gray-300 font-light" data-lang-key="job_title">أخصائي تسويق رقمي ومبدع محتوى مدعوم بالذكاء الاصطناعي</p>
+            
+            <!-- Core Skills Badges in Header (UPDATED) -->
+            <div class="mt-6 flex flex-wrap justify-center items-center gap-3">
+                <div data-lang-key="header_badge1" class="header-badge flex items-center text-white text-sm font-semibold px-4 py-2 rounded-full cursor-pointer"></div>
+                <div data-lang-key="header_badge2" class="header-badge flex items-center text-white text-sm font-semibold px-4 py-2 rounded-full cursor-pointer"></div>
+                <div data-lang-key="header_badge3" class="header-badge flex items-center text-white text-sm font-semibold px-4 py-2 rounded-full cursor-pointer"></div>
+                <div data-lang-key="header_badge4" class="header-badge flex items-center text-white text-sm font-semibold px-4 py-2 rounded-full cursor-pointer"></div>
+                <div data-lang-key="header_badge5" class="header-badge flex items-center text-white text-sm font-semibold px-4 py-2 rounded-full cursor-pointer"></div>
+                <div data-lang-key="header_badge6" class="header-badge flex items-center text-white text-sm font-semibold px-4 py-2 rounded-full cursor-pointer"></div>
+                <div data-lang-key="header_badge7" class="header-badge flex items-center text-white text-sm font-semibold px-4 py-2 rounded-full cursor-pointer"></div>
+                <div data-lang-key="header_badge8" class="header-badge flex items-center text-white text-sm font-semibold px-4 py-2 rounded-full cursor-pointer"></div>
+            </div>
         </div>
     </header>
 
     <main class="container mx-auto px-6 py-12">
 
-        <!-- ==== About Me Section (UPDATED) ==== -->
+        <!-- ==== About Me Section (RESTORED) ==== -->
         <section id="about" class="mb-16">
             <div class="bg-white p-8 rounded-xl shadow-md">
                 <h2 class="text-3xl font-bold section-title mb-4" data-lang-key="about_me_title">نبذة عني</h2>
@@ -95,10 +117,10 @@
                 <div class="mt-8 border-t border-gray-200 pt-6">
                     <h3 class="text-xl font-bold text-gray-800 mb-4" data-lang-key="about_me_experience_title">الخبرة العملية</h3>
                     <ul class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4 text-gray-600">
-                        <li class="flex items-center" data-lang-key="about_me_skill1"><i class="fas fa-check-circle text-green-500 rtl:ml-3 ltr:mr-3"></i>أتمتة العمليات بالذكاء الاصطناعي</li>
-                        <li class="flex items-center" data-lang-key="about_me_skill2"><i class="fas fa-check-circle text-green-500 rtl:ml-3 ltr:mr-3"></i>إنشاء مواقع إلكترونية Google Sites</li>
-                        <li class="flex items-center" data-lang-key="about_me_skill3"><i class="fas fa-check-circle text-green-500 rtl:ml-3 ltr:mr-3"></i>تصميم كتالوجات تفاعلية عبر Google Sites</li>
-                        <li class="flex items-center" data-lang-key="about_me_skill4"><i class="fas fa-check-circle text-green-500 rtl:ml-3 ltr:mr-3"></i>تحليل البيانات وصناعة محتوى إبداعي</li>
+                        <li class="flex items-center" data-lang-key="about_me_skill1"></li>
+                        <li class="flex items-center" data-lang-key="about_me_skill2"></li>
+                        <li class="flex items-center" data-lang-key="about_me_skill3"></li>
+                        <li class="flex items-center" data-lang-key="about_me_skill4"></li>
                     </ul>
                 </div>
             </div>
@@ -170,9 +192,9 @@
                          <h3 class="text-2xl font-bold" data-lang-key="exp1_title">إدارة وإنشاء محتوى تسويقي</h3>
                          <p class="text-lg font-semibold text-gray-700" data-lang-key="exp1_company">Doriaan Medical Marketing</p>
                          <ul class="list-disc ltr:pl-5 rtl:pr-5 mt-4 text-gray-600 space-y-2">
-                            <li data-lang-key="exp1_task1">تحرير فيديوهات دعائية وتسويقية احترافية للمنتجات الطبية باستخدام CapCut.</li>
-                            <li data-lang-key="exp1_task2">تصميم مواد تسويقية متنوعة بما في ذلك الكتالوجات، الشعارات، ومنشورات وسائل التواصل الاجتماعي.</li>
-                            <li data-lang-key="exp1_task3">تنفيذ تحليلات بيانات للمشاريع باستخدام Google Sheets و Excel لدعم القرارات.</li>
+                             <li data-lang-key="exp1_task1">تحرير فيديوهات دعائية وتسويقية احترافية للمنتجات الطبية باستخدام CapCut.</li>
+                             <li data-lang-key="exp1_task2">تصميم مواد تسويقية متنوعة بما في ذلك الكتالوجات، الشعارات، ومنشورات وسائل التواصل الاجتماعي.</li>
+                             <li data-lang-key="exp1_task3">تنفيذ تحليلات بيانات للمشاريع باستخدام Google Sheets و Excel لدعم القرارات.</li>
                          </ul>
                      </div>
                  </div>
@@ -277,11 +299,19 @@
             ar: {
                 name: "محمد سليمان",
                 job_title: "أخصائي تسويق رقمي ومبدع محتوى مدعوم بالذكاء الاصطناعي",
+                header_badge1: '<i class="fas fa-database ltr:mr-2 rtl:ml-2"></i> <span>تحليل البيانات</span>',
+                header_badge2: '<i class="fab fa-google ltr:mr-2 rtl:ml-2"></i> <span>Google Sites</span>',
+                header_badge3: '<i class="fas fa-robot ltr:mr-2 rtl:ml-2"></i> <span>أتمتة AI</span>',
+                header_badge4: '<i class="fas fa-palette ltr:mr-2 rtl:ml-2"></i> <span>Canva</span>',
+                header_badge5: '<i class="fas fa-camera ltr:mr-2 rtl:ml-2"></i> <span>تصوير فوتوغرافي</span>',
+                header_badge6: '<i class="fas fa-film ltr:mr-2 rtl:ml-2"></i> <span>موشن جرافيك</span>',
+                header_badge7: '<i class="fas fa-pen-nib ltr:mr-2 rtl:ml-2"></i> <span>تصميم شعارات</span>',
+                header_badge8: '<i class="fas fa-swatchbook ltr:mr-2 rtl:ml-2"></i> <span>تصميمات</span>',
                 about_me_title: "نبذة عني",
                 about_me_text: "خريج إدارة أعمال بخلفية قوية في التسويق الرقمي وإبداع المحتوى، متخصص في توظيف الذكاء الاصطناعي لتطوير استراتيجيات مبتكرة وتحقيق نتائج ملموسة.",
                 about_me_experience_title: "الخبرة العملية",
                 about_me_skill1: "<i class='fas fa-check-circle text-green-500 rtl:ml-3 ltr:mr-3'></i>أتمتة العمليات بالذكاء الاصطناعي",
-                about_me_skill2: "<i class='fas fa-check-circle text-green-500 rtl:ml-3 ltr:mr-3'></i>إنشاء مواقع إلكترونية احترافية",
+                about_me_skill2: "<i class='fas fa-check-circle text-green-500 rtl:ml-3 ltr:mr-3'></i>إنشاء مواقع احترافية (Google Sites)",
                 about_me_skill3: "<i class='fas fa-check-circle text-green-500 rtl:ml-3 ltr:mr-3'></i>تصميم كتالوجات تفاعلية عبر Google Sites",
                 about_me_skill4: "<i class='fas fa-check-circle text-green-500 rtl:ml-3 ltr:mr-3'></i>تحليل البيانات وصناعة محتوى إبداعي",
                 competencies_title: "الكفاءات الأساسية",
@@ -329,11 +359,19 @@
             en: {
                 name: "Mohamed Soliman",
                 job_title: "Digital Marketing Specialist & AI-Powered Content Creator",
+                header_badge1: '<i class="fas fa-database ltr:mr-2 rtl:ml-2"></i> <span>Data Analysis</span>',
+                header_badge2: '<i class="fab fa-google ltr:mr-2 rtl:ml-2"></i> <span>Google Sites</span>',
+                header_badge3: '<i class="fas fa-robot ltr:mr-2 rtl:ml-2"></i> <span>AI Automation</span>',
+                header_badge4: '<i class="fas fa-palette ltr:mr-2 rtl:ml-2"></i> <span>Canva</span>',
+                header_badge5: '<i class="fas fa-camera ltr:mr-2 rtl:ml-2"></i> <span>Photography</span>',
+                header_badge6: '<i class="fas fa-film ltr:mr-2 rtl:ml-2"></i> <span>Motion Graphics</span>',
+                header_badge7: '<i class="fas fa-pen-nib ltr:mr-2 rtl:ml-2"></i> <span>Logo Design</span>',
+                header_badge8: '<i class="fas fa-swatchbook ltr:mr-2 rtl:ml-2"></i> <span>Designs</span>',
                 about_me_title: "About Me",
                 about_me_text: "A Business Administration graduate with a strong background in digital marketing and content creation. I specialize in leveraging artificial intelligence to develop innovative strategies and achieve tangible results.",
                 about_me_experience_title: "Practical Experience",
                 about_me_skill1: "<i class='fas fa-check-circle text-green-500 rtl:ml-3 ltr:mr-3'></i>AI Process Automation",
-                about_me_skill2: "<i class='fas fa-check-circle text-green-500 rtl:ml-3 ltr:mr-3'></i>Professional Website Creation",
+                about_me_skill2: "<i class='fas fa-check-circle text-green-500 rtl:ml-3 ltr:mr-3'></i>Professional Website Creation (Google Sites)",
                 about_me_skill3: "<i class='fas fa-check-circle text-green-500 rtl:ml-3 ltr:mr-3'></i>Interactive Catalogs via Google Sites",
                 about_me_skill4: "<i class='fas fa-check-circle text-green-500 rtl:ml-3 ltr:mr-3'></i>Data Analysis & Creative Content",
                 competencies_title: "Core Competencies",
